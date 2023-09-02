@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sate Maranggi Mang Ino</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Maranggi<span>Mang Ino</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form end -->
+
+      <!-- Shopping Cart start -->
+      <div class="shopping-cart">
+        <h2>Cart Items</h2>
+        <div id="cartItems"></div>
+        <p id="totalPrice"></p>
+        <button onclick="deleteAll()" class="delete-all-button">
+          Delete All
+        </button>
+        <button onclick="checkout()" class="checkout-button">Checkout</button>
+      </div>
+      <!-- Shopping Cart end -->
+
+      <!-- Account start -->
+      <div class="account">
+        <label for="account"><i data-feather="user"></i></label>
+      </div>
+      <!-- Account end -->
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Mari Nikmati Sate Maranggi <span>Mang Ino</span></h1>
+        <p>
+          Dibuat dari <span>daging pilihan</span> dengan
+          <span>perpaduan sambal yang Khas.</span>
+        </p>
+        <a href="#products" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/ini-header.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h2>Kenapa <span>memilih kami?</span></h2>
+          <h3>
+            Selamat datang di Sate Maranggi Mang Ino! Kami adalah bisnis yang
+            berdedikasi untuk menyajikan sate maranggi yang lezat dan autentik
+            kepada pelanggan kami. Dengan pengalaman bertahun-tahun dalam
+            industri kuliner, kami telah membangun reputasi sebagai tujuan
+            kuliner yang terpercaya bagi pecinta sate di seluruh wilayah.
+          </h3>
+          <h3>
+            Kami memahami bahwa sate maranggi adalah warisan kuliner yang
+            berharga, dan kami berkomitmen untuk mempertahankan cita rasa asli
+            yang membuatnya begitu istimewa. Setiap hidangan sate yang kami
+            sajikan diolah dengan hati-hati menggunakan bahan-bahan berkualitas
+            tinggi dan resep turun-temurun yang kami jaga dengan baik. Kami
+            yakin bahwa kombinasi sempurna dari daging yang lembut,
+            rempah-rempah yang kaya, dan bumbu khas kami akan membuat Anda
+            terpesona dengan setiap gigitan.
+          </h3>
+        </div>
+        <div class="content">
+          <h2>Kenapa memilih <span>Sate kami?</span></h2>
+          <h3>
+            Sate Kami terbuat dari daging pilihan yang gurih, empuk dan manis
+            dengan perpaduan bumbu saus bercitarasa pedas manis.
+          </h3>
+          <h3>
+            kami sangat memperhatikan kebersihan dan keamanan makanan. Kami
+            menjaga standar sanitasi yang tinggi dalam setiap tahap persiapan
+            makanan, mulai dari pemilihan bahan baku hingga proses memasak.
+            Keamanan makanan adalah prioritas utama kami, dan kami selalu
+            berusaha memberikan produk yang aman dan terjamin ke segala
+            pelanggan kami.
+          </h3>
+          <h3>
+            Kami percaya bahwa kepuasan pelanggan adalah kunci kesuksesan kami.
+            Oleh karena itu, kami senantiasa berupaya untuk memberikan
+            pengalaman kuliner yang tak terlupakan setiap kali Anda mengunjungi
+            kami. Kami juga terbuka terhadap umpan balik dan saran dari
+            pelanggan, karena hal itu membantu kami terus meningkatkan kualitas
+            makanan dan pelayanan kami.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- About Section end -->
+
+    <!-- Menu Section start -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, repellendus numquam quam tempora voluptatum.
+    </p> -->
+
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/menu/Sate.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">Daging Polos</h3>
+          <p class="menu-card-price">Rp. 42.500 ,- ( 10 Pcs )</p>
+          <button
+            onclick="addToCart('Daging Polos', 42500)"
+            class="add-to-cart-button"
+          >
+            <i data-feather="shopping-cart"></i>
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/Sate.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">Selap Gajih ( Lemak )</h3>
+          <p class="menu-card-price">Rp. 37.500 ,- ( 10 Pcs )</p>
+          <!-- <a href="#" class="cta"><i data-feather="shopping-cart"></i></a> -->
+          <button
+            onclick="addToCart('Selap Gajih', 37500)"
+            class="add-to-cart-button"
+          >
+            <i data-feather="shopping-cart"></i>
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/Sate.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">Nasi</h3>
+          <p class="menu-card-price">Rp. 4.000 ,-</p>
+          <button onclick="addToCart('Nasi', 4000)" class="add-to-cart-button">
+            <i data-feather="shopping-cart"></i>
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/Sate.jpg" alt="Espresso" class="menu-card-img" />
+          <h3 class="menu-card-title">Extra Sambal</h3>
+          <p class="menu-card-price">Rp. 5.000 ,-</p>
+          <button
+            onclick="addToCart('Sambal', 5000)"
+            class="add-to-cart-button"
+          >
+            <i data-feather="shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section end -->
+
+    <!-- Products Section start -->
+
+    <!-- Products Section end -->
+
+    <!-- Contact Section start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.
+    </p> -->
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form id="contactForm">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" id="name" placeholder="Nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="message-square"></i>
+            <input type="text" id="message" placeholder="message" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="shopping-cart"></i></a>
+        <a href="#"><i data-feather="phone"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>
+          Created by <a href="https://github.com/Ronniesw">Ronnie Satrio</a>. |
+          &copy; 2023.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Modal Box Item Detail start -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/Sate.jpg" alt="Product 1" />
+          <div class="product-content">
+            <h3>Menu</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Provident, tenetur cupiditate facilis obcaecati ullam maiores
+              minima quos perspiciatis similique itaque, esse rerum eius
+              repellendus voluptatibus!
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
